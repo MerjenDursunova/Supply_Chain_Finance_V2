@@ -1,0 +1,27 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    ports:
+      - "8000:8000"
+    environment:
+      - SCF_DB=/data/scf.db
+    volumes:
+      - scf_data:/data
+    command: >
+      sh -c "python db/seed.py && uvicorn api.main:app --host 0.0.0.0 --port 8000"
+
+  dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile.app
+    ports:
+      - "8501:8501"
+    environment:
+      - API_URL=http://api:8000
+    depends_on:
+      - api
+
+volumes:
+  scf_data:
