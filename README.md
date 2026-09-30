@@ -4,8 +4,12 @@
 > served through a **FastAPI** backend with a **SQL analytics layer**,
 > wrapped in a **Streamlit** dashboard. Extends Chen, Lu & Cai (2020)
 > with an industry-style serving architecture.
+>
+> This is **v2** of [Supply_Chain_Finance](https://github.com/MerjenDursunova/Supply_Chain_Finance)
+> — the original notebooks + Streamlit version. V2 adds a FastAPI backend,
+> SQL analytics layer, tests, CI, and Docker.
 
-[![CI](https://github.com/MerjenDursunova/supply-chain-finance/actions/workflows/ci.yml/badge.svg)](https://github.com/MerjenDursunova/supply-chain-finance/actions)
+[![CI](https://github.com/MerjenDursunova/Supply_Chain_Finance_V2/actions/workflows/ci.yml/badge.svg)](https://github.com/MerjenDursunova/Supply_Chain_Finance_V2/actions)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
 
 ---
